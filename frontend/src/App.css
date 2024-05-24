@@ -1,0 +1,99 @@
+.text-list {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 40px;
+    margin: 20px 0px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #FF0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.add-icon-container {
+    position: absolute;
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.add-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.table-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #FBCEB1;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #FBCEB1;
+}
+
+tfoot tr:last-child {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+tfoot td:first-child {
+    border-top: 2px solid #ccc;
+}
+
+.button-row {
+    text-align: center;
+    justify-content: center;
+}
+
+.button-row button {
+    width: 50px;
+    display: inline-block;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit {
+    background-color: #6CB4EE;
+    justify-content: center;
+}
+
+.delete {
+    background-color: #E32636;
+    justify-content: center;
+    text-align: center;
+}
+
+.table-container th {
+    text-align: center;
+    position: center;
+}
+
+.name {
+    width: 145px;
+}
