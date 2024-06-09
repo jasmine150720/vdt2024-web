@@ -1,0 +1,19 @@
+replicaCount: 2
+
+image:
+  repository: vdt2024-web
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30081
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
