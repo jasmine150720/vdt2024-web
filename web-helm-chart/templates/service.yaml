@@ -3,17 +3,14 @@ kind: Service
 metadata:
   name: {{ .Release.Name }}-frontend-service
   labels:
-    app: frontend
+    app: {{ .Release.Name }}-frontend
     component: frontend
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
 spec:
-  type: {{ .Values.service.type }}
+  type: NodePort
   selector:
     component: frontend
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: 9333
+    - port: 3000
+      targetPort: 3000
       protocol: TCP
       nodePort: {{ .Values.service.nodePort }}
