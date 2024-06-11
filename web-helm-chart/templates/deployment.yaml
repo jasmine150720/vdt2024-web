@@ -3,11 +3,8 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }}-frontend
   labels:
-    app: frontend
+    app: {{ .Release.Name }}-frontend
     component: frontend
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
@@ -16,17 +13,15 @@ spec:
   template:
     metadata:
       labels:
-        app: frontend
+        app: {{ .Release.Name }}-frontend
         component: frontend
-        release: {{ .Release.Name }}
     spec:
       containers:
         - name: frontend
-          image: "{{ .Values.image.repository }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu }}
               memory: {{ .Values.resources.requests.memory }}
           ports:
-            - containerPort: 9333
+            - containerPort: 3000
