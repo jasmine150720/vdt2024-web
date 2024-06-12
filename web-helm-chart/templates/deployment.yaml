@@ -27,5 +27,5 @@ spec:
             - containerPort: 3000
           env:
             - name: REACT_APP_API_URL
-              value: "http://{{ .Values.api.host }}:{{ .Values.api.port }}"
+              value: "http://api:80/api/v1"
         
