@@ -15,7 +15,7 @@ function App() {
     const [reload, setReload] = useState(true);
     
     // API URL
-    const url = ``http://10.0.0.10:30101/api/v1``;
+    const url = `http://10.0.0.10:30101/api/v1``;
 
     // Fetch students data on component mount or reload
     useEffect(() => {
