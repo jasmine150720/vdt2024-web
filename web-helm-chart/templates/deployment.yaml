@@ -25,7 +25,5 @@ spec:
               memory: {{ .Values.resources.requests.memory }}
           ports:
             - containerPort: 3000
-          env:
-            - name: REACT_APP_API_URL
-              value: `http://0.0.0.0:80/api/v1`
+
         
